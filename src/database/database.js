@@ -8,6 +8,7 @@ export const sequelize = new Sequelize(
   {
     port: ENV_VARIABLES.DATABASE_PORT,
     host: ENV_VARIABLES.DATABASE_HOST,
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: ENV_VARIABLES.ENV !== "prod"
   }
 )
